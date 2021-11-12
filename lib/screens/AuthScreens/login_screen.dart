@@ -90,9 +90,6 @@ class _LoginScreenState extends State<LoginScreen> {
                           .signinWithGoogle()
                           .then((UserCredential value) {
                         bool IsfirstTime = value.additionalUserInfo!.isNewUser;
-                        print(IsfirstTime);
-                        final displayName = value.user!.displayName;
-                        print(displayName);
                         if (IsfirstTime) {
                           if (value.additionalUserInfo!.isNewUser) {
                             AuthClass().postDetailsTofireStore(
